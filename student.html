@@ -1,0 +1,131 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+body {
+  background-image: url("bg2.jpg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+background-size:cover;
+}
+#login-box
+{
+position:relative;
+margin:0;
+height:300px;
+width:600;
+background:rgba(255, 99, 71, 0.4);
+box-shadow: 0 2px 4px rgba(0.5,0,0,0.6);
+}
+input[type="submit"]
+{
+margin-bottom:28px;
+width:120px;
+height:42px;
+border:none;
+background:blue;
+color:#ffff;
+font-family:sans-serif;
+font-weight:400;
+text-transform:uppercase;
+cursor:pointer;
+}
+
+.button {
+  background-color:black;
+  border:black;
+  color:white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor:stateblue;
+}
+.button1 {
+  background-color:red;
+  border:black;
+  color:white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor:stateblue;
+}
+p.b
+{
+color:yellow;
+font-size:70;
+padding:0;
+}
+h2
+{
+color:blue;
+font-size:70;
+}
+input[type=text] {
+  width:170;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: none;
+  background-color:gray;
+  color: white;
+}
+input[type=password]{
+  width:170;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  background-color:gray;
+  color:Black;
+}
+</style>
+<script>
+function validate()
+{
+var name=document.f1.username.value;
+var pwd=document.f1.password.value;
+var pwd1=document.f1.pwd.value;
+if(name=="")
+{
+alert("name must be entered")
+return false;
+}
+if(pwd=="")
+{
+alert("PASSWORD must be entered")
+return false;
+}
+if(pwd1=="")
+{
+alert("CONFIRM PASSWORD must be entered")
+return false;
+}
+if(pwd!=pwd1)
+{
+alert("password not matched")
+return false;
+}
+}
+</script>
+</head>
+<body>
+<marquee><h2>TECH-A-THON 2019</h2></marquee>
+<form name="f1" onsubmit="return validate()" action="student.php" method="POST">
+<center>
+<div id="login-box">
+<h1>STUDENT</h1><br>
+USERNAME<input type="text" name="username"><br>
+PASSWORD<input type="password" name="password"><br>
+<input type="submit" name="button" value="login"><br></form>
+</center>
+</body>
+</html>
+
